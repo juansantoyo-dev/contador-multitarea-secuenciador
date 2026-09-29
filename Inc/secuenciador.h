@@ -24,29 +24,8 @@ typedef enum {
    Funciones Públicas
    =========================== */
 
-/*
- * Inicializa el secuenciador:
- * - Configura la LCD ST7920
- * - Inicializa los pines de LEDs (GPIOB 0..3)
- * - Resetea variables globales
- * - Muestra pantalla inicial
- */
 void Secuenciador_Init(void);
-
-/*
- * Función a llamar periódicamente (en el loop principal).
- * Maneja:
- * - Lectura del teclado
- * - Actualización del contador
- * - Control de la secuencia LED
- * 
- * Recomendado: llamar cada 10-20 ms
- */
 void Secuenciador_Update(void);
-
-/*
- * Funciones de consulta del estado
- */
 uint16_t Secuenciador_GetCounter(void);
 uint16_t Secuenciador_GetNumA(void);
 uint16_t Secuenciador_GetNumB(void);
